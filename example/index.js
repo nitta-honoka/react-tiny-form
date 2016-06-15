@@ -38,26 +38,35 @@ class App extends Component {
     return (
       <article>
         <section>
-          <Input type='number' value={inputValue}
-            onChange={v => this.setState({inputValue: v})} />
+          <Input type='number' placeholder='number' onChange={
+            v => this.setState({inputValue: v})
+          } />
 
-          <Textarea value={textValue}
-            onChange={v => this.setState({textValue: v})} />
+          <Textarea onChange={
+            v => this.setState({textValue: v})
+          } />
 
-          <Checkbox checked={checkboxChecked}
-            onChange={checked => this.setState({checkboxChecked: checked})} />
+          <Checkbox onChange={
+            checked => this.setState({checkboxChecked: checked})
+          } />
 
-          <Radio checked={radioChecked}
-            onChange={checked => this.setState({radioChecked: checked})} />
+          <Radio name='radio' value='radio-a' onChange={
+            checked => this.setState({checkedRadio: 'a:' + checked})
+          } />
 
-          <Radio checked={!radioChecked}
-            onChange={checked => this.setState({radioChecked: !checked})} />
+          <Radio name='radio' value='radio-b' onChange={
+            checked => this.setState({checkedRadio: 'b:' + checked})
+          } />
         </section>
 
         <section>
           <Select options={options} optLabel='name' optValue='id'
             value={opt.id} onChange={opt => this.setState({opt})} />
         </section>
+
+        <button onClick={
+          () => console.log(this.state)
+        }>console</button>
       </article>
     )
   }
