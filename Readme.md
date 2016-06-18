@@ -13,6 +13,12 @@
 * Radio
   - `onChange(checked, event)`
 
+* Switch
+  ```jsx
+  <Switch width={78} height={22} checked={switchChecked} label={`I'm Switch`}
+    onChange={v => this.setState({switchChecked: v})} />
+  ```
+
 * Select
   ```jsx
   const options = [{
