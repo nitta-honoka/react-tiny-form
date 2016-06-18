@@ -50,6 +50,10 @@ class App extends Component {
             checked => this.setState({checkboxChecked: checked})
           } />
 
+          <Checkbox checked={true} />
+
+          <Radio checked={true} />
+
           <Radio name='radio' value='radio-a' onChange={
             checked => this.setState({checkedRadio: 'a:' + checked})
           } />
