@@ -10,6 +10,7 @@ import {
 
   Select,
   Switch,
+  Link
 } from '..'
 
 class App extends Component {
@@ -79,6 +80,10 @@ class App extends Component {
         <button onClick={
           () => console.log(this.state)
         }>console</button>
+
+        <section>
+          <Link href='//github.com/haoxins'>me</Link>
+        </section>
       </article>
     )
   }

@@ -13,11 +13,8 @@
 * Radio
   - `onChange(checked, event)`
 
-* Switch
-  ```jsx
-  <Switch width={78} height={22} checked={switchChecked} label={`I'm Switch`}
-    onChange={v => this.setState({switchChecked: v})} />
-  ```
+* Link
+  - just tag `a`, with default props: `target='_blank' rel='noopener noreferrer'`
 
 * Select
   ```jsx
