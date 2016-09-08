@@ -9,7 +9,6 @@ import {
   Input,
 
   Select,
-  Switch,
   Link
 } from '..'
 
@@ -32,7 +31,6 @@ class App extends Component {
 
     const {
       checkboxChecked,
-      switchChecked,
       radioChecked,
       inputValue,
       textValue,
@@ -70,11 +68,6 @@ class App extends Component {
         <section>
           <Select options={options} optLabel='name' optValue='id'
             value={opt.id} onChange={opt => this.setState({opt})} />
-        </section>
-
-        <section>
-          <Switch width={78} height={22} checked={switchChecked} label={`I'm Switch`}
-            onChange={v => this.setState({switchChecked: v})} />
         </section>
 
         <button onClick={

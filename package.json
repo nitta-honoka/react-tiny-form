@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo todo",
     "example": "npm run build && webpack --config example/webpack.js",
-    "build": "babel lib --out-dir build && cp lib/*.css build/",
+    "build": "babel lib --out-dir build",
     "prepublish": "npm run build"
   },
   "repository": "coderhaoxin/react-tiny-form",
@@ -28,14 +28,8 @@
     "babel-preset-es2015": "6",
     "babel-preset-react": "6",
     "babel-preset-stage-0": "6",
-    "css-loader": "0",
-    "postcss": "5",
-    "postcss-import": "8",
-    "postcss-loader": "0",
-    "postcss-nested": "1",
     "react": "15",
     "react-dom": "15",
-    "style-loader": "0",
     "webpack": "1"
   }
 }

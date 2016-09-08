@@ -22,17 +22,8 @@ module.exports = {
     loaders: [{
       loader: 'babel',
       exclude: /node_modules/
-    }, {
-      test: /\.css$/,
-      loader: 'style-loader!css-loader!postcss-loader',
-      exclude: /node_modules/
     }]
   },
-
-  postcss: [
-    require('postcss-import'),
-    require('postcss-nested')
-  ],
 
   devtool: 'source-map'
 }
