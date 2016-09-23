@@ -30,10 +30,6 @@ class App extends Component {
     }]
 
     const {
-      checkboxChecked,
-      radioChecked,
-      inputValue,
-      textValue,
       opt
     } = this.state
 
