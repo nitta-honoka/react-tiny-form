@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { Component } from 'react'
 
 import {
+  DateTime,
   Checkbox,
   Textarea,
   Radio,
@@ -36,6 +37,8 @@ class App extends Component {
     return (
       <article>
         <section>
+          <DateTime onChange={v => alert(new Date(v * 1000))} />
+
           <Input type='number' placeholder='number' onChange={
             v => this.setState({inputValue: v})
           } />
