@@ -15,6 +15,7 @@ import {
 
 class App extends Component {
   state = {
+    opt2: {},
     opt: {}
   }
 
@@ -30,7 +31,19 @@ class App extends Component {
       id: 3
     }]
 
+    const options2 = [{
+      label: 'one',
+      value: 1
+    }, {
+      label: 'two',
+      value: 2
+    }, {
+      label: 'three',
+      value: 3
+    }]
+
     const {
+      opt2,
       opt
     } = this.state
 
@@ -67,6 +80,10 @@ class App extends Component {
         <section>
           <Select options={options} optLabel='name' optValue='id'
             value={opt.id} onChange={opt => this.setState({opt})} />
+
+          <Select options={options2} value={opt2.id}
+            placeholder='this is placeholder'
+            onChange={opt2 => this.setState({opt2})} />
         </section>
 
         <button onClick={
