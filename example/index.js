@@ -54,7 +54,7 @@ class App extends Component {
 
           <Input type='number' placeholder='number' onChange={
             v => this.setState({inputValue: v})
-          } />
+          } onEnter={v => console.info('Enter:', v)} />
 
           <Textarea onChange={
             v => this.setState({textValue: v})
