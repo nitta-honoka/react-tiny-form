@@ -52,9 +52,16 @@ class App extends Component {
         <section>
           <DateTime onChange={v => alert(new Date(v * 1000))} />
 
-          <Input type='number' placeholder='number' onChange={
-            v => this.setState({inputValue: v})
-          } onEnter={v => console.info('Enter:', v)} />
+          <Input placeholder='hi ...'
+            onChange={v => console.debug('change:', v)}
+            onKeyUp={() => console.debug('up')}
+            onKeyDown={() => console.debug('down')}
+            onKeyPress={() => console.debug('press')}
+            onEnter={v => console.debug('Enter:', v)} />
+
+          <Input type='number' placeholder='number'
+            onChange={v => this.setState({inputValue: v})}
+            onEnter={v => console.info('Enter:', v)} />
 
           <Textarea onChange={
             v => this.setState({textValue: v})
